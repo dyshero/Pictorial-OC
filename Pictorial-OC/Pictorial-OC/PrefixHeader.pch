@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  Pictorial-OC
+//
+//  Created by duodian on 2017/5/31.
+//  Copyright © 2017年 duodian. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AFNet.h"
+#import "NSObject+Model.h"
+
+#define BaseURL @"http://chanyouji.com/api/"
+
+#ifdef DEBUG //代表调试状态
+#define DEBUGLog(...) NSLog(__VA_ARGS__)//给NSLog起别名
+
+#else
+#define DEBUGLog(...) //空
+#endif
+
+#define SWIDTH  [UIScreen mainScreen].bounds.size.width
+#define SHEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* PrefixHeader_pch */
