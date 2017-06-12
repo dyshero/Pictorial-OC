@@ -12,6 +12,7 @@
 #import "NSDate+Util.h"
 #import "PictorialView.h"
 #import "SettingView.h"
+#import "ContentDataView.h"
 #import <UIImageView+WebCache.h>
 
 @interface HomeViewController ()<UIScrollViewDelegate>
@@ -19,6 +20,8 @@
 @property (nonatomic,strong)HomeModel *homeModel;
 @property (nonatomic,strong)PictorialView *pictorialView;
 @property (nonatomic,strong)SettingView *settingView;
+@property (nonatomic,strong)ContentDataView *articleView;
+@property (nonatomic,strong)UIToolbar *toolBar;
 @end
 
 @implementation HomeViewController
@@ -56,6 +59,18 @@
         _scrollView.delegate = self;
         _scrollView.contentSize = CGSizeMake(SWIDTH * (_homeModel.articles.count+1), 0);
         [_scrollView addSubview:self.pictorialView];
+        for (NSInteger i = 0; i < _homeModel.articles.count; i ++) {
+            ArticleModel *articleModel = _homeModel.articles[i];
+            ContentDataView *articleView = [[[NSBundle mainBundle] loadNibNamed:@"ContentDataView" owner:nil options:nil] lastObject];
+            __weak typeof(self) ws = self;
+            articleView.alertBlock = ^{
+                [ws.view addSubview:ws.toolBar];
+                [ws.view addSubview:ws.settingView];
+            };
+            articleView.frame = CGRectMake((i + 1)*SWIDTH, 0,SWIDTH, SHEIGHT);
+            articleView.model = articleModel;
+            [_scrollView addSubview:articleView];
+        }
     }
     return _scrollView;
 }
@@ -67,10 +82,35 @@
         [_pictorialView.imageView sd_setImageWithURL:[NSURL URLWithString:_homeModel.ios_wallpaper_url]];
         __weak typeof(self) ws = self;
         _pictorialView.alertBlock = ^{
+            [ws.view addSubview:ws.toolBar];
             [ws.view addSubview:ws.settingView];
         };
     }
     return _pictorialView;
+}
+
+- (ContentDataView *)articleView{
+    if (!_articleView) {
+        _articleView = [[[NSBundle mainBundle] loadNibNamed:@"ContentDataView" owner:nil options:nil] lastObject];
+    }
+    return _articleView;
+}
+
+- (UIToolbar *)toolBar{
+    if (!_toolBar) {
+        _toolBar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
+        _toolBar.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeAlert)];
+        [_toolBar addGestureRecognizer:tap];
+    }
+    return _toolBar;
+}
+
+- (void)removeAlert {
+    [_settingView removeFromSuperview];
+    _settingView = nil;
+    [_toolBar removeFromSuperview];
+    _toolBar = nil;
 }
 
 - (SettingView *)settingView{
@@ -86,7 +126,7 @@
 }
 
 -  (void)cellClicked:(NSInteger)row{
-    
+    [self removeAlert];
 }
 
 @end

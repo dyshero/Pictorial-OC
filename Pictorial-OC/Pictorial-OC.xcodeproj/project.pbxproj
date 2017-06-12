@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		31CE2A83F339E1557EE6069E /* libPods-Pictorial-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C329F31D27CB868876A05C1 /* libPods-Pictorial-OC.a */; };
+		FB12AA6B1EEE73BA00162F44 /* ContentDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */; };
+		FB12AA6D1EEE73CA00162F44 /* ContentDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */; };
+		FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */; };
 		FBF034411EDEA89700D5E3F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF034401EDEA89700D5E3F7 /* main.m */; };
 		FBF034441EDEA89700D5E3F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF034431EDEA89700D5E3F7 /* AppDelegate.m */; };
 		FBF034471EDEA89700D5E3F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF034461EDEA89700D5E3F7 /* ViewController.m */; };
@@ -32,6 +35,11 @@
 		1F87A27FCF7D96F234D3F689 /* Pods-Pictorial-OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pictorial-OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pictorial-OC/Pods-Pictorial-OC.release.xcconfig"; sourceTree = "<group>"; };
 		8C329F31D27CB868876A05C1 /* libPods-Pictorial-OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pictorial-OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD1DBDE732D8E91504474BB /* Pods-Pictorial-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pictorial-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pictorial-OC/Pods-Pictorial-OC.debug.xcconfig"; sourceTree = "<group>"; };
+		FB12AA691EEE73BA00162F44 /* ContentDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDataView.h; sourceTree = "<group>"; };
+		FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDataView.m; sourceTree = "<group>"; };
+		FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentDataView.xib; sourceTree = "<group>"; };
+		FBEDF4A21EEE835200DC981A /* ArticlePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlePhotosView.h; sourceTree = "<group>"; };
+		FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlePhotosView.m; sourceTree = "<group>"; };
 		FBF0343C1EDEA89700D5E3F7 /* Pictorial-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pictorial-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF034401EDEA89700D5E3F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FBF034421EDEA89700D5E3F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +102,15 @@
 				1F87A27FCF7D96F234D3F689 /* Pods-Pictorial-OC.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FBEDF4A11EEE834000DC981A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FBEDF4A21EEE835200DC981A /* ArticlePhotosView.h */,
+				FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		FBF034331EDEA89700D5E3F7 = {
@@ -205,6 +222,7 @@
 		FBF034841EDEB7E800D5E3F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBEDF4A11EEE834000DC981A /* CustomView */,
 				FBF034941EDEC3B100D5E3F7 /* PictorialView.h */,
 				FBF034951EDEC3B100D5E3F7 /* PictorialView.m */,
 				FBF034971EDEC3BE00D5E3F7 /* PictorialView.xib */,
@@ -213,6 +231,9 @@
 				FBF0349C1EDECA1100D5E3F7 /* SettingCell.h */,
 				FBF0349D1EDECA1100D5E3F7 /* SettingCell.m */,
 				FBF0349E1EDECA1100D5E3F7 /* SettingCell.xib */,
+				FB12AA691EEE73BA00162F44 /* ContentDataView.h */,
+				FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */,
+				FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +303,7 @@
 				FBF034A01EDECA1100D5E3F7 /* SettingCell.xib in Resources */,
 				FBF0344F1EDEA89700D5E3F7 /* LaunchScreen.storyboard in Resources */,
 				FBF0344C1EDEA89700D5E3F7 /* Assets.xcassets in Resources */,
+				FB12AA6D1EEE73CA00162F44 /* ContentDataView.xib in Resources */,
 				FBF0344A1EDEA89700D5E3F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */,
 				FBF0348D1EDEB9DB00D5E3F7 /* NSDate+Util.m in Sources */,
 				FBF0347D1EDEB5A700D5E3F7 /* AFNet.m in Sources */,
 				FBF034871EDEB81100D5E3F7 /* BaseViewController.m in Sources */,
@@ -351,6 +374,7 @@
 				FBF034931EDEBF6800D5E3F7 /* ArticleModel.m in Sources */,
 				FBF0348A1EDEB83100D5E3F7 /* HomeViewController.m in Sources */,
 				FBF034801EDEB73A00D5E3F7 /* NSObject+Model.m in Sources */,
+				FB12AA6B1EEE73BA00162F44 /* ContentDataView.m in Sources */,
 				FBF0349F1EDECA1100D5E3F7 /* SettingCell.m in Sources */,
 				FBF034901EDEBAF600D5E3F7 /* HomeModel.m in Sources */,
 				FBF034961EDEC3B100D5E3F7 /* PictorialView.m in Sources */,
