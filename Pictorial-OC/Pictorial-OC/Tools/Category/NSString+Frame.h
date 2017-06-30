@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Frame)
+-(CGFloat)widthWithMaxHeight:(CGFloat)maxHeight attributes:(NSDictionary *)attributes;
 
+-(CGFloat)heightWithMaxWidth:(CGFloat)maxWidth attributes:(NSDictionary *)attributes;
 @end

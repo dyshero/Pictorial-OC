@@ -8,7 +8,8 @@
 
 #import "MyDownloadController.h"
 
-@interface MyDownloadController ()
+@interface MyDownloadController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -16,22 +17,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake((SWIDTH - 40 - 45)/2, 200);
+    layout.sectionInset = UIEdgeInsetsMake(0, 15, 0, 15);
+    layout.minimumLineSpacing = 15;
+    layout.minimumInteritemSpacing = 15;
+    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    _collectionView.collectionViewLayout = layout;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 10;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor blueColor];
+    return cell;
 }
-*/
+
+- (IBAction)closeClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

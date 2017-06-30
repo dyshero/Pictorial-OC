@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WallPaperModel;
 
 @interface WallPaperCell : UICollectionViewCell
-
+@property (nonatomic,weak)WallPaperModel *model;
 @end

@@ -10,7 +10,19 @@
 		31CE2A83F339E1557EE6069E /* libPods-Pictorial-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C329F31D27CB868876A05C1 /* libPods-Pictorial-OC.a */; };
 		FB12AA6B1EEE73BA00162F44 /* ContentDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */; };
 		FB12AA6D1EEE73CA00162F44 /* ContentDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */; };
+		FB941BC01EEF830C00F18FE5 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BBF1EEF830C00F18FE5 /* UILabel+Extension.m */; };
+		FB941BC31EEF846400F18FE5 /* NSString+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC21EEF846400F18FE5 /* NSString+Frame.m */; };
+		FB941BC71EEF8F0000F18FE5 /* MyDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC51EEF8F0000F18FE5 /* MyDownloadController.m */; };
+		FB941BC81EEF8F0000F18FE5 /* MyDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */; };
+		FB941BCB1EEF972B00F18FE5 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */; };
 		FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */; };
+		FBEDF4A71EEE8DB800DC981A /* WallPaperController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A61EEE8DB800DC981A /* WallPaperController.m */; };
+		FBEDF4AB1EEE92CD00DC981A /* WallPaperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A91EEE92CD00DC981A /* WallPaperCell.m */; };
+		FBEDF4AC1EEE92CD00DC981A /* WallPaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEDF4AA1EEE92CD00DC981A /* WallPaperCell.xib */; };
+		FBEDF4AF1EEE950000DC981A /* WallPaperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4AE1EEE950000DC981A /* WallPaperModel.m */; };
+		FBEDF4B51EEE99F800DC981A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4B41EEE99F800DC981A /* UIBarButtonItem+Extension.m */; };
+		FBEDF4B81EEEA77F00DC981A /* EnlargePaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4B71EEEA77F00DC981A /* EnlargePaperView.m */; };
+		FBEDF4BA1EEEA78F00DC981A /* EnlargePaperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEDF4B91EEEA78F00DC981A /* EnlargePaperView.xib */; };
 		FBF034411EDEA89700D5E3F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF034401EDEA89700D5E3F7 /* main.m */; };
 		FBF034441EDEA89700D5E3F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF034431EDEA89700D5E3F7 /* AppDelegate.m */; };
 		FBF034471EDEA89700D5E3F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF034461EDEA89700D5E3F7 /* ViewController.m */; };
@@ -38,8 +50,29 @@
 		FB12AA691EEE73BA00162F44 /* ContentDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDataView.h; sourceTree = "<group>"; };
 		FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDataView.m; sourceTree = "<group>"; };
 		FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentDataView.xib; sourceTree = "<group>"; };
+		FB941BBE1EEF830C00F18FE5 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		FB941BBF1EEF830C00F18FE5 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		FB941BC11EEF846400F18FE5 /* NSString+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Frame.h"; sourceTree = "<group>"; };
+		FB941BC21EEF846400F18FE5 /* NSString+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Frame.m"; sourceTree = "<group>"; };
+		FB941BC41EEF8F0000F18FE5 /* MyDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDownloadController.h; sourceTree = "<group>"; };
+		FB941BC51EEF8F0000F18FE5 /* MyDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDownloadController.m; sourceTree = "<group>"; };
+		FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDownloadController.xib; sourceTree = "<group>"; };
+		FB941BC91EEF972B00F18FE5 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		FBEDF4A21EEE835200DC981A /* ArticlePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlePhotosView.h; sourceTree = "<group>"; };
 		FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlePhotosView.m; sourceTree = "<group>"; };
+		FBEDF4A51EEE8DB800DC981A /* WallPaperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPaperController.h; sourceTree = "<group>"; };
+		FBEDF4A61EEE8DB800DC981A /* WallPaperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPaperController.m; sourceTree = "<group>"; };
+		FBEDF4A81EEE92CD00DC981A /* WallPaperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPaperCell.h; sourceTree = "<group>"; };
+		FBEDF4A91EEE92CD00DC981A /* WallPaperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPaperCell.m; sourceTree = "<group>"; };
+		FBEDF4AA1EEE92CD00DC981A /* WallPaperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallPaperCell.xib; sourceTree = "<group>"; };
+		FBEDF4AD1EEE950000DC981A /* WallPaperModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPaperModel.h; sourceTree = "<group>"; };
+		FBEDF4AE1EEE950000DC981A /* WallPaperModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPaperModel.m; sourceTree = "<group>"; };
+		FBEDF4B31EEE99F800DC981A /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		FBEDF4B41EEE99F800DC981A /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		FBEDF4B61EEEA77F00DC981A /* EnlargePaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnlargePaperView.h; sourceTree = "<group>"; };
+		FBEDF4B71EEEA77F00DC981A /* EnlargePaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnlargePaperView.m; sourceTree = "<group>"; };
+		FBEDF4B91EEEA78F00DC981A /* EnlargePaperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnlargePaperView.xib; sourceTree = "<group>"; };
 		FBF0343C1EDEA89700D5E3F7 /* Pictorial-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pictorial-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF034401EDEA89700D5E3F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FBF034421EDEA89700D5E3F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,6 +207,14 @@
 				FBF0347F1EDEB73A00D5E3F7 /* NSObject+Model.m */,
 				FBF0348B1EDEB9DB00D5E3F7 /* NSDate+Util.h */,
 				FBF0348C1EDEB9DB00D5E3F7 /* NSDate+Util.m */,
+				FBEDF4B31EEE99F800DC981A /* UIBarButtonItem+Extension.h */,
+				FBEDF4B41EEE99F800DC981A /* UIBarButtonItem+Extension.m */,
+				FB941BBE1EEF830C00F18FE5 /* UILabel+Extension.h */,
+				FB941BBF1EEF830C00F18FE5 /* UILabel+Extension.m */,
+				FB941BC11EEF846400F18FE5 /* NSString+Frame.h */,
+				FB941BC21EEF846400F18FE5 /* NSString+Frame.m */,
+				FB941BC91EEF972B00F18FE5 /* NSString+Util.h */,
+				FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -204,6 +245,11 @@
 				FBF034861EDEB81100D5E3F7 /* BaseViewController.m */,
 				FBF034881EDEB83100D5E3F7 /* HomeViewController.h */,
 				FBF034891EDEB83100D5E3F7 /* HomeViewController.m */,
+				FBEDF4A51EEE8DB800DC981A /* WallPaperController.h */,
+				FBEDF4A61EEE8DB800DC981A /* WallPaperController.m */,
+				FB941BC41EEF8F0000F18FE5 /* MyDownloadController.h */,
+				FB941BC51EEF8F0000F18FE5 /* MyDownloadController.m */,
+				FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +261,8 @@
 				FBF0348F1EDEBAF600D5E3F7 /* HomeModel.m */,
 				FBF034911EDEBF6800D5E3F7 /* ArticleModel.h */,
 				FBF034921EDEBF6800D5E3F7 /* ArticleModel.m */,
+				FBEDF4AD1EEE950000DC981A /* WallPaperModel.h */,
+				FBEDF4AE1EEE950000DC981A /* WallPaperModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +282,12 @@
 				FB12AA691EEE73BA00162F44 /* ContentDataView.h */,
 				FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */,
 				FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */,
+				FBEDF4A81EEE92CD00DC981A /* WallPaperCell.h */,
+				FBEDF4A91EEE92CD00DC981A /* WallPaperCell.m */,
+				FBEDF4AA1EEE92CD00DC981A /* WallPaperCell.xib */,
+				FBEDF4B61EEEA77F00DC981A /* EnlargePaperView.h */,
+				FBEDF4B71EEEA77F00DC981A /* EnlargePaperView.m */,
+				FBEDF4B91EEEA78F00DC981A /* EnlargePaperView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,7 +326,8 @@
 				TargetAttributes = {
 					FBF0343B1EDEA89700D5E3F7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 9PH3GF2LMY;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -305,6 +360,9 @@
 				FBF0344C1EDEA89700D5E3F7 /* Assets.xcassets in Resources */,
 				FB12AA6D1EEE73CA00162F44 /* ContentDataView.xib in Resources */,
 				FBF0344A1EDEA89700D5E3F7 /* Main.storyboard in Resources */,
+				FBEDF4BA1EEEA78F00DC981A /* EnlargePaperView.xib in Resources */,
+				FB941BC81EEF8F0000F18FE5 /* MyDownloadController.xib in Resources */,
+				FBEDF4AC1EEE92CD00DC981A /* WallPaperCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,17 +423,26 @@
 			files = (
 				FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */,
 				FBF0348D1EDEB9DB00D5E3F7 /* NSDate+Util.m in Sources */,
+				FBEDF4B81EEEA77F00DC981A /* EnlargePaperView.m in Sources */,
 				FBF0347D1EDEB5A700D5E3F7 /* AFNet.m in Sources */,
 				FBF034871EDEB81100D5E3F7 /* BaseViewController.m in Sources */,
 				FBF034471EDEA89700D5E3F7 /* ViewController.m in Sources */,
+				FB941BC71EEF8F0000F18FE5 /* MyDownloadController.m in Sources */,
 				FBF034441EDEA89700D5E3F7 /* AppDelegate.m in Sources */,
+				FB941BC31EEF846400F18FE5 /* NSString+Frame.m in Sources */,
 				FBF0349B1EDEC96100D5E3F7 /* SettingView.m in Sources */,
 				FBF034411EDEA89700D5E3F7 /* main.m in Sources */,
+				FB941BC01EEF830C00F18FE5 /* UILabel+Extension.m in Sources */,
 				FBF034931EDEBF6800D5E3F7 /* ArticleModel.m in Sources */,
 				FBF0348A1EDEB83100D5E3F7 /* HomeViewController.m in Sources */,
+				FBEDF4AF1EEE950000DC981A /* WallPaperModel.m in Sources */,
+				FBEDF4B51EEE99F800DC981A /* UIBarButtonItem+Extension.m in Sources */,
 				FBF034801EDEB73A00D5E3F7 /* NSObject+Model.m in Sources */,
 				FB12AA6B1EEE73BA00162F44 /* ContentDataView.m in Sources */,
+				FBEDF4A71EEE8DB800DC981A /* WallPaperController.m in Sources */,
+				FB941BCB1EEF972B00F18FE5 /* NSString+Util.m in Sources */,
 				FBF0349F1EDECA1100D5E3F7 /* SettingCell.m in Sources */,
+				FBEDF4AB1EEE92CD00DC981A /* WallPaperCell.m in Sources */,
 				FBF034901EDEBAF600D5E3F7 /* HomeModel.m in Sources */,
 				FBF034961EDEC3B100D5E3F7 /* PictorialView.m in Sources */,
 			);
@@ -498,11 +565,15 @@
 			baseConfigurationReference = CBD1DBDE732D8E91504474BB /* Pods-Pictorial-OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: MENG ZHAO (VDQB7SWMN6)";
+				DEVELOPMENT_TEAM = 9PH3GF2LMY;
 				GCC_PREFIX_HEADER = "Pictorial-OC/PrefixHeader.pch";
 				INFOPLIST_FILE = "Pictorial-OC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "duodian.Pictorial-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddkj.weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "536f8875-ca5c-41c4-96c8-89b65987cbaf";
+				PROVISIONING_PROFILE_SPECIFIER = Weather_Dev;
 			};
 			name = Debug;
 		};
@@ -511,11 +582,16 @@
 			baseConfigurationReference = 1F87A27FCF7D96F234D3F689 /* Pods-Pictorial-OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MENG ZHAO (9PH3GF2LMY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: MENG ZHAO (9PH3GF2LMY)";
+				DEVELOPMENT_TEAM = 9PH3GF2LMY;
 				GCC_PREFIX_HEADER = "Pictorial-OC/PrefixHeader.pch";
 				INFOPLIST_FILE = "Pictorial-OC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "duodian.Pictorial-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddkj.weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "66edc0cd-dead-40ea-97a0-80ff3c242a24";
+				PROVISIONING_PROFILE_SPECIFIER = Weather_Dis;
 			};
 			name = Release;
 		};

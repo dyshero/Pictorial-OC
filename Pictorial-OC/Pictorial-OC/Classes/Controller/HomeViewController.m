@@ -14,6 +14,8 @@
 #import "SettingView.h"
 #import "ContentDataView.h"
 #import <UIImageView+WebCache.h>
+#import "WallPaperController.h"
+#import "MyDownloadController.h"
 
 @interface HomeViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong)UIScrollView *scrollView;
@@ -127,6 +129,14 @@
 
 -  (void)cellClicked:(NSInteger)row{
     [self removeAlert];
+    if (row == 1) {
+        WallPaperController *wallPaperVC = [[WallPaperController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:wallPaperVC];
+        [self presentViewController:nav animated:YES completion:nil];
+    } else if (row == 2) {
+        MyDownloadController *downloadVC = [[MyDownloadController alloc] initWithNibName:@"MyDownloadController" bundle:nil];
+        [self presentViewController:downloadVC animated:YES completion:nil];
+    }
 }
 
 @end

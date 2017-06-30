@@ -17,7 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [AFNet getRequestHttpURL:@"http://chanyouji.com/api/pictorials.json" completation:^(id object) {
+        NSLog(@"%@",object);
         
+        [AFNet getRequestHttpURL:@"" completation:^(id object) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
     } failure:^(NSError *error) {
         
     }];
