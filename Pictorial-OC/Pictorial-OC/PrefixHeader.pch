@@ -11,6 +11,8 @@
 
 #import "AFNet.h"
 #import "NSObject+Model.h"
+#import "UIImageView+Util.h"
+#import "Config.h"
 
 #define BaseURL @"http://chanyouji.com/api/"
 

@@ -10,6 +10,7 @@
 		31CE2A83F339E1557EE6069E /* libPods-Pictorial-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C329F31D27CB868876A05C1 /* libPods-Pictorial-OC.a */; };
 		FB12AA6B1EEE73BA00162F44 /* ContentDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */; };
 		FB12AA6D1EEE73CA00162F44 /* ContentDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */; };
+		FB72BF3C1F06064F00AE78F9 /* UIImageView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72BF3B1F06064F00AE78F9 /* UIImageView+Util.m */; };
 		FB941BC01EEF830C00F18FE5 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BBF1EEF830C00F18FE5 /* UILabel+Extension.m */; };
 		FB941BC31EEF846400F18FE5 /* NSString+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC21EEF846400F18FE5 /* NSString+Frame.m */; };
 		FB941BC71EEF8F0000F18FE5 /* MyDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC51EEF8F0000F18FE5 /* MyDownloadController.m */; };
@@ -50,6 +51,9 @@
 		FB12AA691EEE73BA00162F44 /* ContentDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDataView.h; sourceTree = "<group>"; };
 		FB12AA6A1EEE73BA00162F44 /* ContentDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDataView.m; sourceTree = "<group>"; };
 		FB12AA6C1EEE73CA00162F44 /* ContentDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentDataView.xib; sourceTree = "<group>"; };
+		FB72BF3A1F06064F00AE78F9 /* UIImageView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Util.h"; sourceTree = "<group>"; };
+		FB72BF3B1F06064F00AE78F9 /* UIImageView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Util.m"; sourceTree = "<group>"; };
+		FB72BF3E1F0607A700AE78F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		FB941BBE1EEF830C00F18FE5 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
 		FB941BBF1EEF830C00F18FE5 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
 		FB941BC11EEF846400F18FE5 /* NSString+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Frame.h"; sourceTree = "<group>"; };
@@ -137,6 +141,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FB72BF3D1F06079200AE78F9 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				FB72BF3E1F0607A700AE78F9 /* Config.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
 		FBEDF4A11EEE834000DC981A /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 		FBF034741EDEAF1A00D5E3F7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				FB72BF3D1F06079200AE78F9 /* Macro */,
 				FBF034751EDEAF1A00D5E3F7 /* Category */,
 				FBF034761EDEAF1A00D5E3F7 /* Net */,
 			);
@@ -215,6 +228,8 @@
 				FB941BC21EEF846400F18FE5 /* NSString+Frame.m */,
 				FB941BC91EEF972B00F18FE5 /* NSString+Util.h */,
 				FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */,
+				FB72BF3A1F06064F00AE78F9 /* UIImageView+Util.h */,
+				FB72BF3B1F06064F00AE78F9 /* UIImageView+Util.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -424,6 +439,7 @@
 				FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */,
 				FBF0348D1EDEB9DB00D5E3F7 /* NSDate+Util.m in Sources */,
 				FBEDF4B81EEEA77F00DC981A /* EnlargePaperView.m in Sources */,
+				FB72BF3C1F06064F00AE78F9 /* UIImageView+Util.m in Sources */,
 				FBF0347D1EDEB5A700D5E3F7 /* AFNet.m in Sources */,
 				FBF034871EDEB81100D5E3F7 /* BaseViewController.m in Sources */,
 				FBF034471EDEA89700D5E3F7 /* ViewController.m in Sources */,

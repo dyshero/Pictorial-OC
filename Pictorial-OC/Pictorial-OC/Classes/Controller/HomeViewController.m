@@ -13,7 +13,6 @@
 #import "PictorialView.h"
 #import "SettingView.h"
 #import "ContentDataView.h"
-#import <UIImageView+WebCache.h>
 #import "WallPaperController.h"
 #import "MyDownloadController.h"
 
@@ -67,7 +66,7 @@
             __weak typeof(self) ws = self;
             articleView.alertBlock = ^{
                 [ws.view addSubview:ws.toolBar];
-                [ws.view addSubview:ws.settingView];
+                [ws addSettingView];
             };
             articleView.frame = CGRectMake((i + 1)*SWIDTH, 0,SWIDTH, SHEIGHT);
             articleView.model = articleModel;
@@ -77,15 +76,31 @@
     return _scrollView;
 }
 
+- (void)addSettingView{
+    [self.view addSubview:self.settingView];
+    self.settingView.transform = CGAffineTransformScale(CGAffineTransformIdentity,CGFLOAT_MIN, CGFLOAT_MIN);
+    [UIView animateWithDuration:0.8
+                     animations:^{
+                         self.settingView.transform =
+                         CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
+                     }
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.2
+                                          animations:^{
+                                              self.settingView.transform = CGAffineTransformIdentity;
+                                          }];
+                     }];
+}
+
 - (PictorialView *)pictorialView{
     if (!_pictorialView) {
         _pictorialView = [[[NSBundle mainBundle] loadNibNamed:@"PictorialView" owner:nil options:nil] lastObject];
         _pictorialView.frame = self.view.bounds;
-        [_pictorialView.imageView sd_setImageWithURL:[NSURL URLWithString:_homeModel.ios_wallpaper_url]];
+        [_pictorialView.imageView imageLoadProgressWithNetImage:_homeModel.ios_wallpaper_url];
         __weak typeof(self) ws = self;
         _pictorialView.alertBlock = ^{
             [ws.view addSubview:ws.toolBar];
-            [ws.view addSubview:ws.settingView];
+            [ws addSettingView];
         };
     }
     return _pictorialView;
@@ -102,17 +117,37 @@
     if (!_toolBar) {
         _toolBar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
         _toolBar.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeAlert)];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toolTap:)];
         [_toolBar addGestureRecognizer:tap];
     }
     return _toolBar;
 }
 
-- (void)removeAlert {
-    [_settingView removeFromSuperview];
-    _settingView = nil;
-    [_toolBar removeFromSuperview];
-    _toolBar = nil;
+- (void)toolTap:(UITapGestureRecognizer *)tap {
+    [self removeAlertWithComplete:nil];
+}
+
+- (void)removeAlertWithComplete:(void(^)())complete {
+    [UIView animateWithDuration:0.2
+                     animations:^{
+                         _settingView.transform =
+                         CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
+                     }
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.3
+                                          animations:^{
+                                              _settingView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.001, 0.001);
+                                          }
+                                          completion:^(BOOL finished) {
+                                              [_settingView removeFromSuperview];
+                                              _settingView = nil;
+                                              [_toolBar removeFromSuperview];
+                                              _toolBar = nil;
+                                              if (complete) {
+                                                  complete();
+                                              }
+                                          }];
+                     }];
 }
 
 - (SettingView *)settingView{
@@ -128,14 +163,18 @@
 }
 
 -  (void)cellClicked:(NSInteger)row{
-    [self removeAlert];
+//    [self removeAlert];
     if (row == 1) {
-        WallPaperController *wallPaperVC = [[WallPaperController alloc] init];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:wallPaperVC];
-        [self presentViewController:nav animated:YES completion:nil];
+        [self removeAlertWithComplete:^{
+            WallPaperController *wallPaperVC = [[WallPaperController alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:wallPaperVC];
+            [self presentViewController:nav animated:YES completion:nil];
+        }];
     } else if (row == 2) {
-        MyDownloadController *downloadVC = [[MyDownloadController alloc] initWithNibName:@"MyDownloadController" bundle:nil];
-        [self presentViewController:downloadVC animated:YES completion:nil];
+        [self removeAlertWithComplete:^{
+            MyDownloadController *downloadVC = [[MyDownloadController alloc] initWithNibName:@"MyDownloadController" bundle:nil];
+            [self presentViewController:downloadVC animated:YES completion:nil];
+        }];
     }
 }
 

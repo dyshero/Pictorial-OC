@@ -8,7 +8,6 @@
 
 #import "WallPaperCell.h"
 #import "WallPaperModel.h"
-#import <UIImageView+WebCache.h>
 
 @interface WallPaperCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -19,7 +18,7 @@
 @implementation WallPaperCell
 
 - (void)setModel:(WallPaperModel *)model{
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.ios_wallpaper_url]];
+    [_imageView imageLoadProgressWithNetImage:model.ios_wallpaper_url];
     NSArray *dateArray = [model.publish_date componentsSeparatedByString:@"-"];
     _dayLabel.text = dateArray[2];
     _monthLabel.text = [self monthWithNum:dateArray[1]];
