@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WallPaperModel : NSObject
+@interface WallPaperModel : NSObject <NSCoding>
 @property (nonatomic,copy)NSString *ID;
 @property (nonatomic,copy)NSString *destination;
 @property (nonatomic,copy)NSString *android_wallpaper_url;

@@ -163,7 +163,6 @@
 }
 
 -  (void)cellClicked:(NSInteger)row{
-//    [self removeAlert];
     if (row == 1) {
         [self removeAlertWithComplete:^{
             WallPaperController *wallPaperVC = [[WallPaperController alloc] init];

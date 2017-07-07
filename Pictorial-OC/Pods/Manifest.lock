@@ -19,19 +19,24 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - SDWebImage
   - SVProgressHUD
+  - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 9e9840719b8dae879bbcb1bcd1c5fd590c701185
+PODFILE CHECKSUM: 02ed0a8ed2fe853456d35059f51fb5fc54a9c0bf
 
 COCOAPODS: 1.2.1

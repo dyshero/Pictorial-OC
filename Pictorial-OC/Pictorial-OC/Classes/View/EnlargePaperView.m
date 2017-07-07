@@ -11,6 +11,10 @@
 #import "WallPaperModel.h"
 #import "NSString+Frame.h"
 #import <SVProgressHUD.h>
+#import "UILabel+Extension.h"
+#import "DownloadImageTool.h"
+
+#define ALERT_INTERVAL 100
 
 @interface EnlargePaperView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -78,24 +82,13 @@
     });
 }
 
-- (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
+- (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     if (!error) {
-        NSString *documentPath = [self getDocumentPath];
-        NSString *arrayFilePath = [documentPath stringByAppendingPathComponent:@"downloads.plist"];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:arrayFilePath]) {
-            NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithFile:arrayFilePath];
-        }
-        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+        [DownloadImageTool savePaperWithModel:_model];
+        [SVProgressHUD showSuccessWithStatus:@"保存成功~"];
     }else {
         [SVProgressHUD showErrorWithStatus:@"保存失败"];
     }
-}
-
-- (NSString *)getDocumentPath {
-    NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = documents[0];
-    return documentPath;
 }
 
 @end

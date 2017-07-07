@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void(^ImageTapBlock)(UITapGestureRecognizer *tap);
 
 @interface ArticlePhotosView : UIView
 - (void)setImageWithArray:(NSArray *)images;
+@property (nonatomic,strong) ImageTapBlock imageTapBlock;
 @end

@@ -12,6 +12,7 @@
 #import "WallPaperModel.h"
 #import "UIBarButtonItem+Extension.h"
 #import "EnlargePaperView.h"
+#import "DownloadImageTool.h"
 
 @interface WallPaperController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView *collectionView;
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.title = @"壁纸集";
@@ -43,7 +45,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (UICollectionView *)collectionView{
+- (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);

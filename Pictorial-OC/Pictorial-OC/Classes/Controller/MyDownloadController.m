@@ -7,10 +7,13 @@
 //
 
 #import "MyDownloadController.h"
+#import "WallPaperModel.h"
+#import "DownloadImageTool.h"
+#import <UIImageView+WebCache.h>
 
 @interface MyDownloadController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
 @implementation MyDownloadController
@@ -24,15 +27,27 @@
     layout.minimumInteritemSpacing = 15;
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     _collectionView.collectionViewLayout = layout;
+    
+    NSArray *downloadArray = [[NSUserDefaults standardUserDefaults] objectForKey:DOWNLOAD_DATA];
+    _dataArray = [NSMutableArray array];
+    for (NSData *data in downloadArray) {
+        WallPaperModel *model = [DownloadImageTool wallPaperModelFromData:data];
+        [_dataArray addObject:model];
+    }
+    [self.collectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return _dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    WallPaperModel *model = _dataArray[indexPath.item];
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor blueColor];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:model.ios_wallpaper_url]];
+    [cell.contentView addSubview:imageView];
     return cell;
 }
 

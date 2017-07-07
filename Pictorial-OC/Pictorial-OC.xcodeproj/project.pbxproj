@@ -16,6 +16,8 @@
 		FB941BC71EEF8F0000F18FE5 /* MyDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC51EEF8F0000F18FE5 /* MyDownloadController.m */; };
 		FB941BC81EEF8F0000F18FE5 /* MyDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */; };
 		FB941BCB1EEF972B00F18FE5 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */; };
+		FBE022951F0C8B2000BF9850 /* AmplifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE022941F0C8B2000BF9850 /* AmplifyView.m */; };
+		FBE022981F0C986400BF9850 /* DownloadImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE022971F0C986400BF9850 /* DownloadImageTool.m */; };
 		FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */; };
 		FBEDF4A71EEE8DB800DC981A /* WallPaperController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A61EEE8DB800DC981A /* WallPaperController.m */; };
 		FBEDF4AB1EEE92CD00DC981A /* WallPaperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A91EEE92CD00DC981A /* WallPaperCell.m */; };
@@ -63,6 +65,10 @@
 		FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDownloadController.xib; sourceTree = "<group>"; };
 		FB941BC91EEF972B00F18FE5 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		FBE022931F0C8B2000BF9850 /* AmplifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmplifyView.h; sourceTree = "<group>"; };
+		FBE022941F0C8B2000BF9850 /* AmplifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmplifyView.m; sourceTree = "<group>"; };
+		FBE022961F0C986400BF9850 /* DownloadImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImageTool.h; sourceTree = "<group>"; };
+		FBE022971F0C986400BF9850 /* DownloadImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImageTool.m; sourceTree = "<group>"; };
 		FBEDF4A21EEE835200DC981A /* ArticlePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlePhotosView.h; sourceTree = "<group>"; };
 		FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlePhotosView.m; sourceTree = "<group>"; };
 		FBEDF4A51EEE8DB800DC981A /* WallPaperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPaperController.h; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 			children = (
 				FBEDF4A21EEE835200DC981A /* ArticlePhotosView.h */,
 				FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */,
+				FBE022931F0C8B2000BF9850 /* AmplifyView.h */,
+				FBE022941F0C8B2000BF9850 /* AmplifyView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -209,6 +217,8 @@
 				FB72BF3D1F06079200AE78F9 /* Macro */,
 				FBF034751EDEAF1A00D5E3F7 /* Category */,
 				FBF034761EDEAF1A00D5E3F7 /* Net */,
+				FBE022961F0C986400BF9850 /* DownloadImageTool.h */,
+				FBE022971F0C986400BF9850 /* DownloadImageTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -447,6 +457,7 @@
 				FBF034441EDEA89700D5E3F7 /* AppDelegate.m in Sources */,
 				FB941BC31EEF846400F18FE5 /* NSString+Frame.m in Sources */,
 				FBF0349B1EDEC96100D5E3F7 /* SettingView.m in Sources */,
+				FBE022951F0C8B2000BF9850 /* AmplifyView.m in Sources */,
 				FBF034411EDEA89700D5E3F7 /* main.m in Sources */,
 				FB941BC01EEF830C00F18FE5 /* UILabel+Extension.m in Sources */,
 				FBF034931EDEBF6800D5E3F7 /* ArticleModel.m in Sources */,
@@ -458,6 +469,7 @@
 				FBEDF4A71EEE8DB800DC981A /* WallPaperController.m in Sources */,
 				FB941BCB1EEF972B00F18FE5 /* NSString+Util.m in Sources */,
 				FBF0349F1EDECA1100D5E3F7 /* SettingCell.m in Sources */,
+				FBE022981F0C986400BF9850 /* DownloadImageTool.m in Sources */,
 				FBEDF4AB1EEE92CD00DC981A /* WallPaperCell.m in Sources */,
 				FBF034901EDEBAF600D5E3F7 /* HomeModel.m in Sources */,
 				FBF034961EDEC3B100D5E3F7 /* PictorialView.m in Sources */,

@@ -13,6 +13,7 @@
 #import "NSObject+Model.h"
 #import "UIImageView+Util.h"
 #import "Config.h"
+#import <YYKit.h>
 
 #define BaseURL @"http://chanyouji.com/api/"
 

@@ -10,6 +10,7 @@
 #import <UIImageView+WebCache.h>
 #import "ArticleModel.h"
 #import "ArticlePhotosView.h"
+#import "AmplifyView.h"
 
 @interface ContentDataView ()
 
@@ -25,7 +26,7 @@
 @implementation ContentDataView
 
 - (void)setModel:(ArticleModel *)model{
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.image_url]];
+    [_imageView setImageWithURL:[NSURL URLWithString:model.image_url] placeholder:nil options:YYWebImageOptionRefreshImageCache completion:nil];
     _titLabel.text = model.title;
     _descLabel.text = model.desc;
     _photo_authorLabel.text = model.photo_author;
@@ -39,6 +40,15 @@
     }
     
     [_photosView setImageWithArray:model.photos];
+    
+    _photosView.imageTapBlock = ^(UITapGestureRecognizer *tap) {
+        [self imageTapWithTap:tap];
+    };
+}
+
+- (void)imageTapWithTap:(UITapGestureRecognizer *)tap {
+    AmplifyView *amplifyView = [[AmplifyView alloc] initWithFrame:[UIScreen mainScreen].bounds andGesture:tap andSuperView:self];
+    [[UIApplication sharedApplication].keyWindow addSubview:amplifyView];
 }
 
 - (IBAction)alertClicked:(id)sender {

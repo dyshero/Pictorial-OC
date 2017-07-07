@@ -6,9 +6,6 @@
 //
 
 #import "AFNet.h"
-/**
- * If you are not satisfied, you can continue to package
- */
 @implementation AFNet
 
 + (id)shareManager {

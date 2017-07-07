@@ -10,6 +10,7 @@
 @class ArticleModel;
 typedef void(^AlertBlock)();
 
+typedef void(^ImageTapBlock)(UITapGestureRecognizer *tap);
 @interface ContentDataView : UIView
 @property (nonatomic,weak)ArticleModel *model;
 @property (nonatomic,strong) AlertBlock alertBlock;
