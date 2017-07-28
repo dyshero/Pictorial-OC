@@ -16,6 +16,8 @@
 		FB941BC71EEF8F0000F18FE5 /* MyDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC51EEF8F0000F18FE5 /* MyDownloadController.m */; };
 		FB941BC81EEF8F0000F18FE5 /* MyDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */; };
 		FB941BCB1EEF972B00F18FE5 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */; };
+		FBBA45F51F2B32B700A5C6C5 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBA45F41F2B32B700A5C6C5 /* HomeViewModel.m */; };
+		FBBA45F81F2B340900A5C6C5 /* WallPaperViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBA45F71F2B340900A5C6C5 /* WallPaperViewModel.m */; };
 		FBE022951F0C8B2000BF9850 /* AmplifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE022941F0C8B2000BF9850 /* AmplifyView.m */; };
 		FBE022981F0C986400BF9850 /* DownloadImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE022971F0C986400BF9850 /* DownloadImageTool.m */; };
 		FBEDF4A41EEE835200DC981A /* ArticlePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDF4A31EEE835200DC981A /* ArticlePhotosView.m */; };
@@ -65,6 +67,10 @@
 		FB941BC61EEF8F0000F18FE5 /* MyDownloadController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDownloadController.xib; sourceTree = "<group>"; };
 		FB941BC91EEF972B00F18FE5 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		FB941BCA1EEF972B00F18FE5 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		FBBA45F31F2B32B700A5C6C5 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		FBBA45F41F2B32B700A5C6C5 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		FBBA45F61F2B340900A5C6C5 /* WallPaperViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPaperViewModel.h; sourceTree = "<group>"; };
+		FBBA45F71F2B340900A5C6C5 /* WallPaperViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPaperViewModel.m; sourceTree = "<group>"; };
 		FBE022931F0C8B2000BF9850 /* AmplifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmplifyView.h; sourceTree = "<group>"; };
 		FBE022941F0C8B2000BF9850 /* AmplifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmplifyView.m; sourceTree = "<group>"; };
 		FBE022961F0C986400BF9850 /* DownloadImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImageTool.h; sourceTree = "<group>"; };
@@ -153,6 +159,17 @@
 				FB72BF3E1F0607A700AE78F9 /* Config.h */,
 			);
 			path = Macro;
+			sourceTree = "<group>";
+		};
+		FBBA45F21F2B324500A5C6C5 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				FBBA45F31F2B32B700A5C6C5 /* HomeViewModel.h */,
+				FBBA45F41F2B32B700A5C6C5 /* HomeViewModel.m */,
+				FBBA45F61F2B340900A5C6C5 /* WallPaperViewModel.h */,
+				FBBA45F71F2B340900A5C6C5 /* WallPaperViewModel.m */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 		FBEDF4A11EEE834000DC981A /* CustomView */ = {
@@ -256,6 +273,7 @@
 		FBF034811EDEB7E800D5E3F7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FBBA45F21F2B324500A5C6C5 /* VM */,
 				FBF034821EDEB7E800D5E3F7 /* Controller */,
 				FBF034831EDEB7E800D5E3F7 /* Model */,
 				FBF034841EDEB7E800D5E3F7 /* View */,
@@ -463,12 +481,14 @@
 				FBF034931EDEBF6800D5E3F7 /* ArticleModel.m in Sources */,
 				FBF0348A1EDEB83100D5E3F7 /* HomeViewController.m in Sources */,
 				FBEDF4AF1EEE950000DC981A /* WallPaperModel.m in Sources */,
+				FBBA45F81F2B340900A5C6C5 /* WallPaperViewModel.m in Sources */,
 				FBEDF4B51EEE99F800DC981A /* UIBarButtonItem+Extension.m in Sources */,
 				FBF034801EDEB73A00D5E3F7 /* NSObject+Model.m in Sources */,
 				FB12AA6B1EEE73BA00162F44 /* ContentDataView.m in Sources */,
 				FBEDF4A71EEE8DB800DC981A /* WallPaperController.m in Sources */,
 				FB941BCB1EEF972B00F18FE5 /* NSString+Util.m in Sources */,
 				FBF0349F1EDECA1100D5E3F7 /* SettingCell.m in Sources */,
+				FBBA45F51F2B32B700A5C6C5 /* HomeViewModel.m in Sources */,
 				FBE022981F0C986400BF9850 /* DownloadImageTool.m in Sources */,
 				FBEDF4AB1EEE92CD00DC981A /* WallPaperCell.m in Sources */,
 				FBF034901EDEBAF600D5E3F7 /* HomeModel.m in Sources */,

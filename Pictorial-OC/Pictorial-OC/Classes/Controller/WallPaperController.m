@@ -13,10 +13,11 @@
 #import "UIBarButtonItem+Extension.h"
 #import "EnlargePaperView.h"
 #import "DownloadImageTool.h"
+#import "WallPaperViewModel.h"
 
-@interface WallPaperController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface WallPaperController ()<UICollectionViewDelegate>
 @property (nonatomic,strong)UICollectionView *collectionView;
-@property (nonatomic,strong)NSMutableArray *dataArray;
+@property (nonatomic, strong)  WallPaperViewModel *requesViewModel;
 @end
 
 @implementation WallPaperController
@@ -29,16 +30,15 @@
     self.title = @"壁纸集";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barItemWithTitle:nil image:@"close" frame:CGRectMake(0, 0, 30, 30) target:self sel:@selector(close)];
     [self.view addSubview:self.collectionView];
-    _dataArray = [NSMutableArray array];
-    [AFNet getRequestHttpURL:@"http://chanyouji.com/api/pictorials.json" completation:^(id object) {
-        for (NSDictionary *dic in object) {
-            WallPaperModel *model = [WallPaperModel modelWithDict:dic];
-            [_dataArray addObject:model];
-        }
-        [self.collectionView reloadData];
-    } failure:^(NSError *error) {
-        
-    }];
+    self.requesViewModel.collectionView = self.collectionView;
+    [self.requesViewModel.reuqesCommand execute:nil];
+}
+
+- (WallPaperViewModel *)requesViewModel {
+    if (!_requesViewModel) {
+        _requesViewModel = [[WallPaperViewModel alloc] init];
+    }
+    return _requesViewModel;
 }
 
 - (void)close {
@@ -53,28 +53,15 @@
         layout.minimumLineSpacing = 5;
         layout.minimumInteritemSpacing = 5;
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView.dataSource = self.requesViewModel;
         _collectionView.delegate = self;
-        _collectionView.dataSource = self;
         [_collectionView registerNib:[UINib nibWithNibName:@"WallPaperCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return _dataArray.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    WallPaperCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.model = _dataArray[indexPath.item];
-    return cell;
-}
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    WallPaperModel *model = _dataArray[indexPath.item];
-    EnlargePaperView *enlargeView = [[[NSBundle mainBundle] loadNibNamed:@"EnlargePaperView" owner:nil options:nil] lastObject];
-    enlargeView.frame = self.navigationController.view.bounds;
-    enlargeView.model = model;
-    [self.navigationController.view addSubview:enlargeView];
+    WallPaperModel *model = self.requesViewModel.models[indexPath.item];
+    [self.requesViewModel showLargeWithPublicModel:model WithViewController:self];
 }
 @end
