@@ -1,2 +1,2 @@
 # Pictorial-OC
-足记画报---OC版本
+<b>OC版本的足记画报</b>
