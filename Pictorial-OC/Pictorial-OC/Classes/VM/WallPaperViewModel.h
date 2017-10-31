@@ -13,5 +13,5 @@
 @property (nonatomic, strong, readonly) RACCommand *reuqesCommand;
 @property (nonatomic, strong, readonly) NSArray *models;
 @property (nonatomic, weak) UICollectionView *collectionView;
-- (void)showLargeWithPublicModel: (WallPaperModel *)paperModel WithViewController: (UIViewController *)superController;
+- (void)showLargeWithPublicModel: (WallPaperModel *)paperModel WithViewController: (UIViewController *)superController defaultImageView:(UIImageView *)defaultImageView;
 @end

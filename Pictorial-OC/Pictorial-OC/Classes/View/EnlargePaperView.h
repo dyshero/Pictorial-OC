@@ -10,6 +10,5 @@
 @class WallPaperModel;
 
 @interface EnlargePaperView : UIView
-//@property (nonatomic,copy)NSString *imageUrl;
 @property (nonatomic,weak) WallPaperModel *model;
 @end

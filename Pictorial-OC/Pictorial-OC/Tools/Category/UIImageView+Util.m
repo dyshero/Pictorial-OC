@@ -19,9 +19,12 @@
         
         UIImage *plachoderImage = [UIImage imageNamed:@"placholder_date.png"];
         
+        
         __block UIProgressView *progressView;
         [self sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:plachoderImage options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                [progressView removeFromSuperview];
+                progressView = nil;
                 if (progressView == nil) {
                     progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
                     [self addSubview:progressView];
@@ -31,12 +34,9 @@
                     progressView.backgroundColor = [UIColor whiteColor];
                     progressView.progressTintColor = COLOR_THEME;
                     progressView.trackTintColor = [UIColor whiteColor];
-                    float progress = (float)receivedSize / (float)expectedSize;
-                    progressView.progress = progress;
-                } else{
-                    [progressView removeFromSuperview];
-                    progressView = nil;
                 }
+                float progress = (float)receivedSize / (float)expectedSize;
+                progressView.progress = progress;
             });
         } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             self.image = image;

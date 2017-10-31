@@ -10,6 +10,13 @@
 #import "WallPaperCell.h"
 #import "WallPaperModel.h"
 #import "EnlargePaperView.h"
+#import <Masonry.h>
+
+@interface WallPaperViewModel ()
+@property (nonatomic,assign) CGRect defaultFrame;
+@property (nonatomic,strong) UIView *enlargeView;
+@end
+
 
 @implementation WallPaperViewModel
 
@@ -56,20 +63,34 @@
     return cell;
 }
 
-
-- (void)showLargeWithPublicModel:(WallPaperModel *)paperModel WithViewController:(UIViewController *)superController {
-    EnlargePaperView *enlargeView = [[[NSBundle mainBundle] loadNibNamed:@"EnlargePaperView" owner:nil options:nil] lastObject];
-    enlargeView.frame = superController.navigationController.view.bounds;
-    enlargeView.model = paperModel;
-    [superController.navigationController.view addSubview:enlargeView];
+- (void)showLargeWithPublicModel:(WallPaperModel *)paperModel WithViewController:(UIViewController *)superController defaultImageView:(UIImageView *)defaultImageView {
+    UIView *enlargeView = [[UIView alloc] init];
+    enlargeView.userInteractionEnabled = YES;
+    enlargeView.backgroundColor = [UIColor redColor];
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = defaultImageView.image;
+    [enlargeView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.trailing.leading.mas_equalTo(enlargeView);
+    }];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGRect defaultFrame = [defaultImageView convertRect:defaultImageView.frame toView:window];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(UITapGestureRecognizer *sender) {
+            [UIView animateWithDuration:0.5 animations:^{
+                enlargeView.frame = defaultFrame;
+            } completion:^(BOOL finished) {
+                [sender.view removeFromSuperview];
+            }];
+    }];
+    [enlargeView addGestureRecognizer:tap];
+    enlargeView.frame = defaultFrame;
+    [window addSubview:enlargeView];
+    [UIView animateWithDuration:0.5 animations:^{
+        enlargeView.frame = window.bounds;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    WallPaperModel *model = _dataArray[indexPath.item];
-//    EnlargePaperView *enlargeView = [[[NSBundle mainBundle] loadNibNamed:@"EnlargePaperView" owner:nil options:nil] lastObject];
-//    enlargeView.frame = self.navigationController.view.bounds;
-//    enlargeView.model = model;
-//    [self.navigationController.view addSubview:enlargeView];
-}
 
 @end

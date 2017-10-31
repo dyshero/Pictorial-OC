@@ -62,6 +62,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     WallPaperModel *model = self.requesViewModel.models[indexPath.item];
-    [self.requesViewModel showLargeWithPublicModel:model WithViewController:self];
+    WallPaperCell *cell = (WallPaperCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    UIImageView *defaultImageView = [cell.contentView viewWithTag:1];
+    [self.requesViewModel showLargeWithPublicModel:model WithViewController:self defaultImageView:defaultImageView];
 }
 @end

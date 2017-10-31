@@ -178,4 +178,17 @@
     }];
 }
 
++ (RACSignal *)getRequestHttpURL:(NSString *)url parameters:(NSDictionary *)parameters {
+    RACSubject *sub = [ RACSubject subject];
+    AFHTTPSessionManager *manager = [AFNet shareManager];
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        id responseData = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        [sub sendNext:responseData];
+        [sub sendCompleted];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    return sub;
+}
+
 @end

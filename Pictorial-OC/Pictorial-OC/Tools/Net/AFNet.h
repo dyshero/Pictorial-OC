@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 typedef void(^SuccessBlock)(id object);//成功回传数据
 typedef void(^FailureBlock)(NSError *error);//失败回传数据
@@ -67,5 +68,15 @@ typedef void(^DownloadBlock)(NSURLResponse *response, NSURL *filePath, NSError *
 + (void)downloadWithRequestURL:(NSString *)URLString
                       progress:(ProgressBlock)progress
                   completation:(DownloadBlock)download;
+
+
+
+/**
+ Request network data by get way
+ @param url A server url
+ @param parameters parameter
+ @return signal
+ */
++ (RACSignal *)getRequestHttpURL:(NSString *)url parameters:(NSDictionary *)parameters;
 
 @end
