@@ -21,8 +21,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[HomeViewController alloc] init];
-    //////cesg=
-    ///master 测试
     return YES;
 }
 
