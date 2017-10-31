@@ -13,6 +13,7 @@
 		FB6682B11FA860F200C3297A /* shot2.png in Resources */ = {isa = PBXBuildFile; fileRef = FB6682AE1FA860F200C3297A /* shot2.png */; };
 		FB6682B21FA860F200C3297A /* shot1.png in Resources */ = {isa = PBXBuildFile; fileRef = FB6682AF1FA860F200C3297A /* shot1.png */; };
 		FB6682B31FA860F200C3297A /* shot3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB6682B01FA860F200C3297A /* shot3.png */; };
+		FB6682B51FA864C700C3297A /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = FB6682B41FA864C600C3297A /* movie.mov */; };
 		FB72BF3C1F06064F00AE78F9 /* UIImageView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72BF3B1F06064F00AE78F9 /* UIImageView+Util.m */; };
 		FB941BC01EEF830C00F18FE5 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BBF1EEF830C00F18FE5 /* UILabel+Extension.m */; };
 		FB941BC31EEF846400F18FE5 /* NSString+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB941BC21EEF846400F18FE5 /* NSString+Frame.m */; };
@@ -61,6 +62,7 @@
 		FB6682AE1FA860F200C3297A /* shot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot2.png; sourceTree = "<group>"; };
 		FB6682AF1FA860F200C3297A /* shot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot1.png; sourceTree = "<group>"; };
 		FB6682B01FA860F200C3297A /* shot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot3.png; sourceTree = "<group>"; };
+		FB6682B41FA864C600C3297A /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
 		FB72BF3A1F06064F00AE78F9 /* UIImageView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Util.h"; sourceTree = "<group>"; };
 		FB72BF3B1F06064F00AE78F9 /* UIImageView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Util.m"; sourceTree = "<group>"; };
 		FB72BF3E1F0607A700AE78F9 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		FB6682A71FA85FA600C3297A /* Screenshot */ = {
 			isa = PBXGroup;
 			children = (
+				FB6682B41FA864C600C3297A /* movie.mov */,
 				FB6682AF1FA860F200C3297A /* shot1.png */,
 				FB6682AE1FA860F200C3297A /* shot2.png */,
 				FB6682B01FA860F200C3297A /* shot3.png */,
@@ -419,6 +422,7 @@
 				FBF034A01EDECA1100D5E3F7 /* SettingCell.xib in Resources */,
 				FBF0344F1EDEA89700D5E3F7 /* LaunchScreen.storyboard in Resources */,
 				FBF0344C1EDEA89700D5E3F7 /* Assets.xcassets in Resources */,
+				FB6682B51FA864C700C3297A /* movie.mov in Resources */,
 				FB6682B11FA860F200C3297A /* shot2.png in Resources */,
 				FB6682B21FA860F200C3297A /* shot1.png in Resources */,
 				FB12AA6D1EEE73CA00162F44 /* ContentDataView.xib in Resources */,
